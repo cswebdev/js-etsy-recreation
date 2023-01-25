@@ -15,10 +15,12 @@
 
 
     <section id="etsy-recreation" class="row"></section>
-    <script id="etsy-page-template" type="text/x-handelbars-template">
+    <script id="etsy-page-template" type="text/x-handlebars-template">
+        // should I use #each?
 
-        <div class="card" style="width: 18rem;">
-            <img src="{{url_570xN}}" class="card-img-top">
+        {{#each results}}
+        <div class="card etsy-page-template" style="width: 18rem;">
+            <img src="{{Images.url_570xN}}" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">{{title}}</h5>
                 <p class="card-text">{{description}}</p>
