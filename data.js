@@ -4472,3 +4472,5 @@ const data = {
       next_page: 2,
    },
 };
+
+export { data };

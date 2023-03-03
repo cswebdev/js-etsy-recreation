@@ -1,17 +1,8 @@
-(function () {
-   "use strict";
+import { data } from "./data.js";
 
-   const source = document.getElementById("data.js");
-   const template = Handlebars.compile(source);
-
-   const context = {
-      title: "",
-      description: "",
-      price: "",
-   };
-   const html = template(context);
-   Insert.getElementById("etsy-recreation").insertAdjacentHTML(
-      "afterbegin",
-      html
-   );
-})();
+const source = document.getElementById("etsy-card-template").innerHTML;
+const template = Handlebars.compile(source);
+const html = template(data);
+document
+   .getElementById("etsy-recreation")
+   .insertAdjacentHTML("afterbegin", html);
